@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/toolbar.css" />
+    <link rel="stylesheet" href="/assets/css/category.css" />
+    <style></style>
+  </head>
+  <body>
+    <header class="menu-tool-bar">
+      <div class="left-menu-container">
+        <img src="/assets/img/home-white.png" class="tool-bar-img def-div home-btn" />
+      </div>
+      <img src="/assets/img/tool_bar_seperator.png" class="tool-bar-img def-div tool-bar-seperator" />
+      <div class="brand-name">SAMPLE CAFE</div>
+    </header>
+    <div class="main-container">
+      <main class="category-container">
+        <div class="category-item-container grid1">
+          <div class="category-item coffee-icon">
+            <p>COFFEE</p>
+          </div>
+        </div>
+        <div class="category-item-container grid2">
+          <div class="category-item beberage-icon">
+            <p>BEBERAGE</p>
+          </div>
+        </div>
+        <div class="category-item-container grid3">
+          <div class="category-item tea-icon">
+            <p>TEA</p>
+          </div>
+        </div>
+        <div class="category-item-container grid4">
+          <div class="category-item dessert-icon">
+            <p>DESSERT</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer-menu-container">
+      <div class="merchandise-basket">
+        <!-- <div class="merchandise">
+          <img src="/assets/img/coffee.png" />
+        </div> -->
+      </div>
+      <div class="pay-info-div">
+        <div class="price-info">
+          <div class="total-cnt">
+            <span>총</span>
+            <span>3</span>
+            <span>개</span>
+          </div>
+          <div class="total-price">
+            <span>13,500</span>
+            <span>원</span>
+          </div>
+        </div>
+        <div class="pay-btn">
+          <span>결제하기</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll(".category-item").forEach((el) => {
+        el.addEventListener("click", () => {
+          location.href = "/menu-view.html";
+        });
+      });
+    </script>
+  </body>
+</html>

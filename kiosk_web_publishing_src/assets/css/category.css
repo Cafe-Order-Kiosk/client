@@ -1,0 +1,99 @@
+/* 카테고리 섹션 속성 */
+.main-container {
+  margin-top: 150px;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+.category-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: repeat(2, 1fr);
+}
+
+.category-item-container {
+  /* #RESPONES */
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  padding: 100px;
+  /* background-color: aqua; */
+}
+
+.category-item-container > .category-item > p {
+  text-align: center;
+  font-size: 90px;
+  padding-top: 30px;
+  /* padding-top: 570px; */
+}
+
+.category-item {
+  /* #RESPONES */
+  background-color: var(--light-gray);
+  border-radius: 100px;
+  width: 700px;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+.category-item:hover {
+  cursor: pointer;
+  transition: 0.19s;
+  background-color: var(--dark-gray);
+}
+.category-item > div {
+  line-height: 700px;
+}
+
+.grid1 {
+  border-right: 2px solid var(--cat-line);
+  border-bottom: 2px solid var(--cat-line);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.grid2 {
+  border-bottom: 2px solid var(--cat-line);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.grid3 {
+  border-right: 2px solid var(--cat-line);
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.grid4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* 카테고리 메뉴의 아이콘들 */
+.coffee-icon {
+  background-image: url(/assets/img/coffee-big.png);
+}
+
+.beberage-icon {
+  background-image: url(/assets/img/beberage-big2.png);
+}
+
+.tea-icon {
+  background-image: url(/assets/img/tea-big.png);
+}
+
+.dessert-icon {
+  background-image: url(/assets/img/dessert-big.png);
+}
+
+/* footer 포지션 */
+.footer-menu-container {
+  height: -1280px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/toolbar.css" />
+    <link rel="stylesheet" href="/assets/css/menu-view.css" />
+  </head>
+  <body>
+    <header class="menu-tool-bar">
+      <div class="left-menu-container">
+        <img src="/assets/img/home-white.png" class="tool-bar-img def-div home-btn" />
+        <img src="/assets/img/category.png" class="tool-bar-img def-div cat-btn" />
+      </div>
+      <img src="/assets/img/tool_bar_seperator.png" class="tool-bar-img def-div tool-bar-seperator" />
+      <div class="brand-name">SAMPLE CAFE</div>
+    </header>
+    <main class="product-container">
+      <div class="product-flex-container">
+        <!-- <div class="product">
+          <img src="/assets/img/beberage-big2.png" />
+          <hr />
+          <p class="product-name">콜드브루 라떼</p>
+          <p class="product-price">₩ 4,200</p>
+        </div> -->
+      </div>
+    </main>
+    <footer class="footer-menu-container">
+      <div class="merchandise-basket">
+        <!-- <div class="merchandise">
+          <img src="/assets/img/coffee.png" />
+        </div> -->
+      </div>
+      <div class="pay-info-div">
+        <div class="price-info">
+          <div class="total-cnt">
+            <span>총</span>
+            <span>3</span>
+            <span>개</span>
+          </div>
+          <div class="total-price">
+            <span>13,500</span>
+            <span>원</span>
+          </div>
+        </div>
+        <div class="pay-btn">
+          <span>결제하기</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/grab-scroll.js"></script>
+    <script src="/assets/js/create-items.js"></script>
+    <script>
+      document.querySelector(".cat-btn").addEventListener("click", () => {
+        location.href = "/category.html";
+      });
+    </script>
+  </body>
+</html>

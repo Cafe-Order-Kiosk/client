@@ -1,0 +1,144 @@
+/*메뉴 툴바 관련 속성들 */
+body {
+  height: 2160px;
+}
+
+.menu-tool-bar {
+  /* #RESPONES */
+  /*메뉴 툴바 */
+  display: flex;
+  height: 200px;
+  background-color: var(--root);
+}
+
+.menu-tool-bar > * {
+  /* #RESPONES */
+  margin-left: 30px;
+}
+.menu-tool-bar > .left-menu-container {
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+}
+.menu-tool-bar > .left-menu-container > .tool-bar-img {
+  /* 툴바 속 홈 버튼 같은 이미지 들 전역 속성 */
+  display: block;
+  margin: 30px;
+  cursor: pointer;
+}
+
+/* 툴바 이미지 아이템들 개별 속성 */
+.home-btn {
+  /* #RESPONES */
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+  max-height: 140px;
+  margin-top: 20px;
+}
+
+/* .tool-bar-seperator {
+} */
+
+.brand-name {
+  text-align: left;
+  font-size: 80px;
+  line-height: 200px;
+  cursor: pointer;
+  color: white;
+}
+
+/* footer-tool-bar 옵션 */
+.footer-menu-container {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background-color: var(--root);
+  position: absolute;
+}
+
+/* 고른 상품이 담기는 영역 */
+.merchandise-basket {
+  cursor: pointer;
+  display: flex;
+  overflow: scroll;
+  flex-direction: row;
+  flex-flow: row;
+  width: 78%;
+  height: 90%;
+  margin: 8px;
+  border: 3px solid rgb(116, 115, 115);
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  scroll-behavior: smooth;
+}
+.merchandise-basket::-webkit-scrollbar {
+  display: none;
+}
+
+.merchandise {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 15px;
+  flex-shrink: 0;
+  background-color: var(--light-gray2);
+  border-radius: 15px;
+}
+.merchandise > img {
+  display: block;
+  width: max-content;
+  height: max-content;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+/* 고른 상품의 총 갯수, 결제 금액, 결제 버튼 등등 */
+/* 전체 컨테이너 */
+.pay-info-div {
+  display: flex;
+  width: 30%;
+  height: 90%;
+  margin: 8px;
+  /*background-color: white;*/
+  border: 3px solid rgb(116, 115, 115);
+  border-radius: 24px;
+}
+
+/* 결제정보 컨테이너, 가격, 갯수 */
+.pay-info-div > * {
+  cursor: default;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.pay-info-div > .price-info > * {
+  height: 50%;
+  width: 100%;
+  line-height: 90px;
+}
+.pay-info-div > .price-info > *:first-child {
+  background-color: rgba(43, 63, 107, 0.859);
+  border-top-left-radius: 20px;
+}
+.pay-info-div > .price-info > *:last-child {
+  background-color: rgba(123, 142, 169, 0.859);
+  border-bottom-left-radius: 20px;
+}
+
+/* 결제 버튼 속성 */
+.pay-btn {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.pay-btn > span {
+  color: black;
+  line-height: 11rem;
+}

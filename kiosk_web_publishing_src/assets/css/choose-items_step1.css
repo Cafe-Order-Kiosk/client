@@ -1,0 +1,68 @@
+/* 하단 바디부분 속성 */
+.item-body-container > p {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  line-height: 180px;
+  font-size: 36px;
+}
+
+.choose-simple-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.choose-simple-container > * {
+  width: 490px;
+  height: 350px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.choose-simple-container > *:first-child {
+  border-right: 1px solid rgb(51, 51, 51);
+}
+.choose-simple-container > *:last-child {
+  border-left: 1px solid rgb(51, 51, 51);
+}
+
+.choose-simple-container > * > * {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  margin-top: 25px;
+  border-radius: 15px;
+  transition: 0.15s;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.choose-simple-container > * > *:hover {
+  background-color: whitesmoke;
+}
+
+.choose-simple-container > * > * > img {
+  display: block;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  margin: 0 auto;
+  margin-top: 5%;
+  position: relative;
+}
+.choose-default-btn > img {
+  content: url(/assets/img/coffee-big.png);
+}
+
+.choose-custom-btn > img {
+  content: url(/assets/img/custom-recipe.png);
+}
+
+/* 빠른 선택 옵션의 텍스트 속성 */
+.choose-simple-container > * > * > p {
+  font-size: 36px;
+  text-align: center;
+  padding-top: 5px;
+}
