@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/toolbar.css" />
+    <link rel="stylesheet" href="/assets/css/pay-result.css" />
+  </head>
+  <body>
+    <header class="menu-tool-bar">
+      <div class="left-menu-container">
+        <img src="/assets/img/home-white.png" class="tool-bar-img def-div home-btn" />
+        <img src="/assets/img/category.png" class="tool-bar-img def-div cat-btn" />
+      </div>
+      <img src="/assets/img/tool_bar_seperator.png" class="tool-bar-img def-div tool-bar-seperator" />
+      <div class="brand-name">SAMPLE CAFE</div>
+    </header>
+    <div class="pay-result-container">
+      <div class="pay-result-item">
+        <div class="item-img">
+          <img />
+        </div>
+        <div class="item-option-container">
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+        </div>
+        <div class="item-info-container">
+          <div class="item-count"><span>1</span></div>
+          <div class="item-name">아메리카노</div>
+        </div>
+      </div>
+      <!-- 지울부분 -->
+      <div class="pay-result-item">
+        <div class="item-img">
+          <img />
+        </div>
+        <div class="item-option-container">
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+        </div>
+        <div class="item-info-container">
+          <div class="item-count"><span>1</span></div>
+          <div class="item-name">아메리카노</div>
+        </div>
+      </div>
+      <div class="pay-result-item">
+        <div class="item-img">
+          <img />
+        </div>
+        <div class="item-option-container">
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+        </div>
+        <div class="item-info-container">
+          <div class="item-count"><span>1</span></div>
+          <div class="item-name">아메리카노</div>
+        </div>
+      </div>
+      <div class="pay-result-item">
+        <div class="item-img">
+          <img />
+        </div>
+        <div class="item-option-container">
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+        </div>
+        <div class="item-info-container">
+          <div class="item-count"><span>1</span></div>
+          <div class="item-name">아메리카노</div>
+        </div>
+      </div>
+      <div class="pay-result-item">
+        <div class="item-img">
+          <img />
+        </div>
+        <div class="item-option-container">
+          <p>
+            <span class="option-name">에스프레소</span>
+            <span class="option-count">1</span>
+            <span class="option-unit">샷</span>
+          </p>
+        </div>
+        <div class="item-info-container">
+          <div class="item-count"><span>1</span></div>
+          <div class="item-name">아메리카노</div>
+        </div>
+      </div>
+
+      <!-- 지울부분 -->
+    </div>
+    <!-- 총 금액 정보 -->
+    <div class="pay-summary-container">
+      <span class="total-cost-text">총 합계 금액</span>
+      <span class="total-cost"
+        >13500
+        <span class="pay-unit">원</span>
+      </span>
+    </div>
+
+    <footer class="pay-footer">
+      <div class="pay-btn-container">
+        <div class="back-menu-btn">
+          <p>이전으로</p>
+        </div>
+        <div class="pay-cancel-btn">
+          <p>결제취소</p>
+        </div>
+        <div class="do-pay-btn">
+          <p>결제하기</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelector(".cat-btn").addEventListener("click", () => {
+        location.href = "/category.html";
+      });
+    </script>
+    <script src="/assets/js/pay-result.js"></script>
+  </body>
+</html>

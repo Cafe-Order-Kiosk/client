@@ -1,0 +1,91 @@
+.pay-step-modal {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid black;
+  z-index: 2;
+  position: absolute;
+  top: 100px;
+  left: 35%;
+  /*font-weight: 100;*/
+}
+
+.pay-select-info-div {
+  width: 90%;
+  height: 50%;
+  margin: 25% auto;
+  /* border: 1px solid black; /* temp */
+}
+
+/* step1. 멤버십 포인트 사용 UI 관련 속성 */
+.pay-step-level {
+  font-size: 32px;
+  margin: 10px;
+}
+.pay-step-text {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.pay-step-btn-container {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid black; /* temp */
+  margin-top: 50px;
+}
+
+.pay-step-btn-container > div {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 120px;
+  background-color: white;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.pay-step-btn-container > div:hover {
+  background-color: whitesmoke;
+}
+
+/* step2. 결제 방식 UI 관련 속성 */
+.pay-step-modal > .pay-select-info-div > .pay-step-btn-container > .p-p-credit {
+  font-size: 14px;
+}
+
+.pay-step-modal > .pay-select-info-div > .pay-step-btn-container > .p-p-point {
+  font-size: 16px;
+}
+
+.pay-step-modal > .pay-select-info-div > .pay-step-btn-container > .p-p-gifticon {
+  font-size: 24px;
+}
+
+/* step3. 결제 중 UI 속성 */
+
+.pay-method-icons {
+  width: 100%;
+  height: 80%;
+  /* border: 1px solid black; /* temp */
+}
+.pay-method-icons > img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.pay-guide-text {
+  margin-top: 30px;
+  font-size: 42px;
+  text-align: center;
+}
+
+/* step4. 멤버십 적립 UI 속성 */

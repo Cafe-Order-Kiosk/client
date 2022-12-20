@@ -1,0 +1,101 @@
+.pay-result-container {
+  width: 100%;
+  height: 58vh;
+  /* border: 5px solid black; /*temp*/
+  position: relative;
+  overflow: scroll;
+}
+.pay-result-container::-webkit-scrollbar {
+  display: none;
+}
+
+.pay-result-item {
+  width: 70%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; /*temp */
+  border-bottom: 3px solid black;
+  margin: 15px auto;
+}
+.pay-result-item > * {
+  margin-left: 30px;
+  margin-right: 50px;
+  cursor: default;
+}
+
+/* 결제 아이템 컴포넌트의 이미지 속성 */
+.pay-result-item > .item-img {
+  width: 130px;
+  height: 130px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.pay-result-item > .item-img > img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  content: url("/assets/img/coffee.png");
+  object-fit: contain;
+}
+/* 결제 아이템 컴포넌트의 주문 옵션 정보 속성 */
+.item-option-container {
+  width: 60%;
+  height: 100%;
+  font-size: 32px;
+  text-align: left;
+  overflow: scroll;
+}
+.item-option-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 결제 아이탬의 수량, 아이템 이름 컴포넌트 옵션 */
+.item-info-container {
+  width: 10%;
+  height: 100%;
+  text-align: right;
+}
+.item-info-container > * {
+  width: 100%;
+  height: 50%;
+  line-height: 50px;
+  font-size: 32px;
+}
+
+.item-info-container > *:first-child > span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  right: 0;
+  margin: 5px 80px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 결제 아이템 갯수 및 이름 정보의 속성 */
+.pay-summary-container {
+  border: 2px solid black; /*temp*/
+  width: 70%;
+  height: 90px;
+  position: sticky;
+  margin: 0 auto;
+  bottom: 0;
+  display: flex;
+  justify-content: right;
+  border-radius: 10px;
+}
+
+.pay-summary-container > span {
+  display: block;
+  width: 15%;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 50px;
+  font-size: 36px;
+  text-align: center;
+  line-height: 90px;
+}
