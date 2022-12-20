@@ -82,6 +82,7 @@ function moveStep3Modal() {
       if (time <= 0) {
         clearInterval(interval);
         closePayModal();
+        location.href = "/home.html";
         return;
       }
       time--;
