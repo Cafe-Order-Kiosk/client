@@ -89,3 +89,254 @@
 }
 
 /* step4. 멤버십 적립 UI 속성 */
+.p-m-c-container > div {
+  width: 160px;
+  height: 160px;
+}
+.p-m-c-container {
+  height: 160px;
+  /*border: 1px solid black; */
+}
+
+.p-m-c-container > div {
+  font-size: 24px;
+  line-height: 160px;
+}
+
+.pay-select-info-div > .p-m-c-timer {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+/* 로그인 모달 */
+.pay-login-container {
+  /* border: 1px solid black; /* temp*/
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  margin-top: 15%;
+  font-size: 24px;
+}
+
+.pay-login-container > p {
+  font-size: 32px;
+}
+
+.pay-login-container > div {
+  display: flex;
+  justify-content: left;
+  margin-top: 10%;
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid black; /*temp*/
+}
+.pay-login-container > div > label {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  border: 2px solid darkgrey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  line-height: 60px;
+  background-color: lightgray;
+}
+.pay-login-container > div > input {
+  width: 70%;
+  height: 100%;
+  border-top: 2px solid darkgray;
+  border-left: none;
+  border-bottom: 2px solid darkgray;
+  border-right: 2px solid darkgray;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.pay-login-container > .login-btn {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: 2px solid darkgray;
+  border-radius: 15px;
+  background-color: lightgray;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.pay-login-container > .login-btn:hover {
+  background-color: darkgray;
+  border-color: rgb(75, 74, 74);
+}
+
+.pay-login-container > .login-btn > p {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 32px;
+  line-height: 65px;
+}
+
+.pay-login-container > .user-info-find {
+  justify-content: center;
+  height: max-content;
+  margin-top: 0;
+}
+
+.pay-login-container > .user-info-find > p {
+  margin-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.pay-login-container > .user-info-find > p:hover {
+  text-decoration: underline;
+}
+.pay-login-container > .user-info-find > p:first-child {
+  border-right: 2px solid darkgray;
+}
+
+/* 회원가입 모달 */
+.pay-regist-container {
+  /* border: 1px solid black; /* temp*/
+  width: 80%;
+  height: 90%;
+  margin: 5% auto;
+  font-size: 24px;
+}
+
+.pay-regist-container > div {
+  /* border: 1px solid black; /* temp */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.pay-regist-container > div:first-child {
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  background-color: lightgray;
+  color: black;
+}
+
+.pay-regist-container > div > * {
+  line-height: 60px;
+}
+
+.pay-regist-container > div > .check-btn {
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  color: black;
+}
+.pay-regist-container > div > .check-btn > span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 3px auto;
+  border-radius: 50px;
+  border: 1px solid darkgray;
+  background-color: white;
+}
+
+.pay-regist-container > div > p {
+  width: 85%;
+  height: 100%;
+}
+
+.pay-regist-container > div > label {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  border: 2px solid darkgrey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  line-height: 60px;
+  background-color: lightgray;
+}
+.pay-regist-container > div > input {
+  width: 70%;
+  height: 100%;
+  border-top: 2px solid darkgray;
+  border-left: none;
+  border-bottom: 2px solid darkgray;
+  border-right: 2px solid darkgray;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.pay-regist-container > .phone-input-div > input {
+  border-bottom-right-radius: 0;
+}
+
+.pay-regist-container > .phone-input-div {
+  margin-bottom: 0;
+}
+
+.news-agency-select {
+  width: 30%;
+  height: 64px;
+  border: 2px solid darkgrey;
+  border-top-left-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  background-color: lightgray;
+}
+.news-agency-select > option {
+  background-color: white;
+}
+
+.pay-regist-container > .send-cert-phone {
+  width: 99.4%;
+  height: 50px;
+  /*border: 2px solid darkgray; /* temp */
+  font-size: 24px;
+  text-align: center;
+  border-left: 2px solid darkgray;
+  border-right: 2px solid darkgray;
+  border-bottom: 2px solid darkgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.pay-regist-container > .send-cert-phone:hover {
+  background-color: var(--root);
+}
+.pay-regist-container > .send-cert-phone > span {
+  width: 100%;
+  text-align: center;
+}
+
+.pay-regist-container > .do-regist-btn {
+  width: 60%;
+  height: 60px;
+  border: 2px solid darkgray;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: lightgray;
+  transition: 0.15s;
+  color: rgb(42, 42, 42);
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.pay-regist-container > .do-regist-btn:hover {
+  background-color: darkgray;
+  border-color: rgb(68, 68, 68);
+}
+
+.do-regist-btn > span {
+  width: 100%;
+  font-size: 32px;
+}
+
+/* 전화번호 모달 */
+
+/* 바코드 모달 */

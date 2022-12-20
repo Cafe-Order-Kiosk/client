@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/assets/css/toolbar.css" />
     <link rel="stylesheet" href="/assets/css/pay-result.css" />
+    <link rel="stylesheet" href="/assets/css/pay-step-modal.css" />
   </head>
   <body>
     <header class="menu-tool-bar">
@@ -150,11 +151,68 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.querySelector(".cat-btn").addEventListener("click", () => {
-        location.href = "/category.html";
-      });
-    </script>
+    <div class="pay-step-modal" id="pay-step1-modal" style="display: none">
+      <div class="pay-select-info-div">
+        <p class="pay-step-level">STEP 1.</p>
+        <p class="pay-step-text">멤버스 포인트를 사용하시나요?</p>
+        <div class="pay-step-btn-container" id="step1-btn-container">
+          <div class="p-m-telephone">
+            <span>휴대 전화</span>
+          </div>
+          <div class="p-m-barcode">
+            <span>바코드</span>
+          </div>
+          <div class="p-m-not">
+            <span>사용 안함</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pay-step-modal" id="pay-step2-modal" style="display: none">
+      <div class="pay-select-info-div">
+        <p class="pay-step-level">STEP 2.</p>
+        <p class="pay-step-text">결제 방식을 선택해주세요.</p>
+        <div class="pay-step-btn-container" id="step2-btn-container">
+          <div class="p-p-credit">
+            <p>체크카드/신용카드</p>
+          </div>
+          <div class="p-p-point">
+            <span>포인트카드/상품권</span>
+          </div>
+          <div class="p-p-gifticon">
+            <span>기프티콘</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pay-step-modal" id="pay-progress-modal" style="display: none">
+      <div class="pay-select-info-div">
+        <div class="pay-method-icons">
+          <img src="/assets/img/credit-card.png" />
+        </div>
+        <p class="pay-guide-text">결제중입니다</p>
+      </div>
+    </div>
+    <div class="pay-step-modal" id="pay-step3-modal" style="display: none">
+      <div class="pay-select-info-div">
+        <p class="pay-step-level">STEP 3.</p>
+        <p class="pay-step-text">포인트를 적립하시겠어요?</p>
+        <div class="pay-step-btn-container p-m-c-container" id="step3-btn-container">
+          <div class="p-m-c-ok">
+            <p>적립할게요!</p>
+          </div>
+          <div class="p-m-c-no" id="p-m-c-no">
+            <span>적립은 됐어요...</span>
+          </div>
+        </div>
+        <p class="p-m-c-timer">
+          <span id="mileage-time"></span>
+          초 후에 창이 닫힙니다...
+        </p>
+      </div>
+    </div>
+    <div class="background" id="background" style="display: none"></div>
+    <script src="/assets/js/toolbar.js"></script>
     <script src="/assets/js/pay-result.js"></script>
   </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/toolbar.css" />
+    <link rel="stylesheet" href="/assets/css/pay-step-modal.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pay-step-modal">
+      <div class="pay-select-info-div">
+        <p class="pay-step-level">STEP 3.</p>
+        <p class="pay-step-text">포인트를 적립하시겠어요?</p>
+        <div class="pay-step-btn-container p-m-c-container">
+          <div class="p-m-c-ok">
+            <p>적립할게요!</p>
+          </div>
+          <div class="p-m-c-no">
+            <span>적립은 됐어요...</span>
+          </div>
+        </div>
+        <p class="p-m-c-timer">
+          <span id="mileage-time"></span>
+          초 후에 창이 닫힙니다...
+        </p>
+      </div>
+    </div>
+    <script>
+      let timeSpan = document.getElementById("mileage-time");
+      timeSpan.textContent = "10";
+
+      setInterval(() => {
+        let timeSpan = document.getElementById("mileage-time");
+        let time = timeSpan.textContent;
+        if (time <= 0) {
+          // clearInterval();
+          return;
+        }
+        time--;
+        timeSpan.textContent = time;
+      }, 1000);
+    </script>
+  </body>
+</html>
