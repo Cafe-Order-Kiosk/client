@@ -15,7 +15,7 @@
 /* 음료 사이즈 버튼 속성 */
 .size-menu-container {
   width: 100%;
-  height: 200px;
+  height: 160px;
 }
 
 .size-menu-container > * {
@@ -30,14 +30,14 @@
 }
 
 .size-btn-div {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
 
 .size-btn-div > * {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -52,8 +52,7 @@
   width: 80%;
   height: 80%;
   object-fit: contain;
-  margin: 0 auto;
-  margin-top: 10%;
+  margin: 5px auto;
 }
 
 /* 하단의 리스트로 양식으로 추가될 옵션들 스타일 속성 */
@@ -85,36 +84,37 @@
 }
 
 .option-item > .option-info-div {
-  width: 280px;
+  width: 200px;
   display: flex;
   justify-content: space-between;
 }
 
 .option-item > .option-info-div > .option-name {
   height: 50px;
-  font-size: 32px;
+  font-size: 24px;
 }
 .option-item > .option-info-div > .option-price {
   height: 100%;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .option-item > .option-info-div > .option-price > span {
-  line-height: 40px;
+  line-height: 10px;
 }
 
 .option-item > .option-count-container {
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 30px;
   display: flex;
   justify-content: center;
-  font-size: 32px;
+  font-size: 18px;
   cursor: default;
   /* border: 1px solid black; temp */
 }
 .option-item > .option-count-container > * {
   width: 33%;
-  line-height: 50px;
+  height: 100%;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -145,15 +145,18 @@
 .confirm-btn-container > * {
   margin-left: 50px;
   margin-right: 50px;
-  width: 300px;
-  height: 76px;
+  width: 200px;
+  height: 50px;
   border: 2px solid black;
   border-radius: 20px;
-  font-size: 36px;
+  font-size: 30px;
   text-align: center;
-  line-height: 80px;
+  line-height: 55px;
   cursor: pointer;
   transition: 0.15s;
+}
+.confirm-btn-container > *:last-child {
+  color: white;
 }
 
 .confirm-btn-container > .item-cancel-btn {

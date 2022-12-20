@@ -1,72 +1,88 @@
 /* 카테고리 섹션 속성 */
 .main-container {
-  margin-top: 150px;
   width: 100%;
-  height: max-content;
+  height: 78vh;
   display: flex;
   justify-content: center;
 }
 
 .category-container {
+  width: 40%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.category-grid-container {
   /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr; */
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: repeat(2, 1fr);
+  row-gap: 10%;
+  column-gap: 10%;
 }
 
 .category-item-container {
   /* #RESPONES */
   display: flex;
   justify-content: center;
-  width: max-content;
-  height: max-content;
-  padding: 100px;
+  width: 100%;
+  height: 100%;
+  /* padding: 100px; */
   /* background-color: aqua; */
 }
 
 .category-item-container > .category-item > p {
   text-align: center;
-  font-size: 90px;
-  padding-top: 30px;
+  font-size: 42px;
+  margin-top: 10px;
   /* padding-top: 570px; */
 }
 
 .category-item {
   /* #RESPONES */
-  background-color: var(--light-gray);
-  border-radius: 100px;
-  width: 700px;
-  height: 700px;
+  background-color: white;
+  border-radius: 50px;
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
+  /* margin-top: 5%; */
 }
 .category-item:hover {
   cursor: pointer;
   transition: 0.19s;
-  background-color: var(--dark-gray);
+  background-color: whitesmoke;
 }
-.category-item > div {
-  line-height: 700px;
+.category-item > img {
+  display: block;
+  margin: 10px auto;
+  width: 70%;
+  height: 70%;
+  object-fit: scale-down;
 }
 
 .grid1 {
-  border-right: 2px solid var(--cat-line);
-  border-bottom: 2px solid var(--cat-line);
+  /* border-right: 2px solid var(--cat-line);
+  border-bottom: 2px solid var(--cat-line); */
   grid-column: 1;
   grid-row: 1;
 }
 
 .grid2 {
-  border-bottom: 2px solid var(--cat-line);
+  /* border-bottom: 2px solid var(--cat-line); */
   grid-column: 2;
   grid-row: 1;
 }
 
 .grid3 {
-  border-right: 2px solid var(--cat-line);
+  /* border-right: 2px solid var(--cat-line); */
   grid-column: 1;
   grid-row: 2;
 }
@@ -76,24 +92,19 @@
   grid-row: 2;
 }
 
-/* 카테고리 메뉴의 아이콘들 */
+/* 카테고리 메뉴 버튼의 이미지 속성들 */
 .coffee-icon {
-  background-image: url(/assets/img/coffee-big.png);
+  content: url(/assets/img/coffee-big.png);
 }
 
-.beberage-icon {
-  background-image: url(/assets/img/beberage-big2.png);
+.beverage-icon {
+  content: url(/assets/img/beberage-big2.png);
 }
 
 .tea-icon {
-  background-image: url(/assets/img/tea-big.png);
+  content: url(/assets/img/tea-big.png);
 }
 
 .dessert-icon {
-  background-image: url(/assets/img/dessert-big.png);
-}
-
-/* footer 포지션 */
-.footer-menu-container {
-  height: -1280px;
+  content: url(/assets/img/dessert-big.png);
 }

@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:400");
 
 body {
-  height: 2160px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 * {
@@ -21,4 +23,15 @@ body {
   --light-gray2: rgb(232, 232, 232);
   --dark-gray: rgb(181, 181, 181);
   --cat-line: rgb(208, 208, 208);
+}
+
+/* 모달 시 뒤에 백그라운드 div 속성 */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.652);
+  width: 100%;
+  height: 100%;
 }

@@ -26,7 +26,7 @@ let menus = [
 ];
 
 const basket = document.querySelector(".merchandise-basket");
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 20; i++) {
   let idx = Math.floor(Math.random() * imgs.length);
   let item = document.createElement("div");
   item.setAttribute("class", "merchandise");
