@@ -16,6 +16,9 @@ function closePayModal() {
   payStep2Modal.setAttribute("style", "display : none;");
   payProgressModal.setAttribute("style", "display : none;");
   payStep3Modal.setAttribute("style", "display : none;");
+  payDialModal.setAttribute("style", "display : none;");
+  payLoginModal.setAttribute("style", "display : none;");
+  payRegistModal.setAttribute("style", "display : none;");
   // 쭉.. none!
 }
 
@@ -28,12 +31,27 @@ document.querySelector(".do-pay-btn").addEventListener("click", () => {
 });
 
 // 결제버튼 중 아무거나 클릭하면 일단 결제 방식으로 넘어가게 설정
-let buttonsStep1 = document.querySelectorAll("#step1-btn-container>div");
-buttonsStep1.forEach((el) => {
-  el.addEventListener("click", () => {
-    payStep1Modal.setAttribute("style", "display:none;");
-    payStep2Modal.setAttribute("style", "display : ;");
-  });
+// 휴대폰
+// p-m-telephone
+let payDialModal = document.getElementById("pay-dial-modal");
+let PMTelephone = document.getElementById("p-m-telephone");
+PMTelephone.addEventListener("click", () => {
+  payStep1Modal.setAttribute("style", "display:none;");
+  payDialModal.setAttribute("style", "display : ;");
+});
+
+// 바코드
+// p-m-barcode
+let PMBarcode = document.getElementById("p-m-barcode");
+PMBarcode.addEventListener("click", () => {
+  alert("준비중!");
+});
+
+// 사용안함
+let PMNot = document.getElementById("p-m-not");
+PMNot.addEventListener("click", () => {
+  payStep1Modal.setAttribute("style", "display:none;");
+  payStep2Modal.setAttribute("style", "display : ;");
 });
 
 // step 2. 기능
@@ -75,6 +93,13 @@ function moveStep3Modal() {
 // step 3. 기능
 let payStep3Modal = document.getElementById("pay-step3-modal");
 // 적립할게요
+let PMCOk = document.getElementById("p-m-c-ok");
+let payLoginModal = document.getElementById("pay-login-modal");
+PMCOk.addEventListener("click", () => {
+  payStep3Modal.setAttribute("style", "display : none;");
+  payLoginModal.setAttribute("style", "display : ;");
+});
+
 // 적립은 됐어요..
 let PMCNo = document.getElementById("p-m-c-no");
 PMCNo.addEventListener("click", () => {
@@ -86,3 +111,11 @@ PMCNo.addEventListener("click", () => {
 // buttonsStep1에 지정된 이벤트 3개 전부 다 다르게 분해
 // buttonsStep2에 지정된 이벤트 체크는 카드 보이게, 포인트는 바코드 UI 보이게
 // buttonsStep3에 적립할게요 버튼에 이벤트 리스너 추가
+
+/* 비밀번호를 잊으셨나요 ? */
+let payRegistModal = document.getElementById("pay-regist-modal");
+let userInfoFindFirst = document.querySelector(".user-info-find > p:first-child");
+userInfoFindFirst.addEventListener("click", () => {
+  payLoginModal.setAttribute("style", "display:none;");
+  payRegistModal.setAttribute("style", "display : ;");
+});

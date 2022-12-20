@@ -6,6 +6,13 @@ if (catBtn != null) {
   });
 }
 
+let homeBtn = document.querySelector(".home-btn");
+if (homeBtn != null) {
+  homeBtn.addEventListener("click", () => {
+    location.href = "/home.html";
+  });
+}
+
 /* footer 기능들 */
 let payBtn = document.querySelector(".pay-btn");
 if (payBtn != null) {

@@ -156,13 +156,13 @@
         <p class="pay-step-level">STEP 1.</p>
         <p class="pay-step-text">멤버스 포인트를 사용하시나요?</p>
         <div class="pay-step-btn-container" id="step1-btn-container">
-          <div class="p-m-telephone">
+          <div class="p-m-telephone" id="p-m-telephone">
             <span>휴대 전화</span>
           </div>
-          <div class="p-m-barcode">
+          <div class="p-m-barcode" id="p-m-barcode">
             <span>바코드</span>
           </div>
-          <div class="p-m-not">
+          <div class="p-m-not" id="p-m-not">
             <span>사용 안함</span>
           </div>
         </div>
@@ -198,7 +198,7 @@
         <p class="pay-step-level">STEP 3.</p>
         <p class="pay-step-text">포인트를 적립하시겠어요?</p>
         <div class="pay-step-btn-container p-m-c-container" id="step3-btn-container">
-          <div class="p-m-c-ok">
+          <div class="p-m-c-ok" id="p-m-c-ok">
             <p>적립할게요!</p>
           </div>
           <div class="p-m-c-no" id="p-m-c-no">
@@ -209,6 +209,104 @@
           <span id="mileage-time"></span>
           초 후에 창이 닫힙니다...
         </p>
+      </div>
+    </div>
+    <div class="pay-step-modal" id="pay-dial-modal" style="display: none">
+      <div class="dial-container">
+        <p>휴대폰 번호를 입력해주세요</p>
+        <div class="dial-window"></div>
+        <div class="dial-grid-container">
+          <div class="grid-item">
+            <span>1</span>
+          </div>
+          <div class="grid-item">
+            <span>2</span>
+          </div>
+          <div class="grid-item">
+            <span>3</span>
+          </div>
+          <div class="grid-item">
+            <span>4</span>
+          </div>
+          <div class="grid-item">
+            <span>5</span>
+          </div>
+          <div class="grid-item">
+            <span>6</span>
+          </div>
+          <div class="grid-item">
+            <span>7</span>
+          </div>
+          <div class="grid-item">
+            <span>8</span>
+          </div>
+          <div class="grid-item">
+            <span>9</span>
+          </div>
+          <div class="grid-item edit-number-btn">
+            <span>←</span>
+          </div>
+          <div class="grid-item">
+            <span>0</span>
+          </div>
+          <div class="grid-item confirm-number-btn">
+            <span>확인</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pay-step-modal" id="pay-login-modal" style="display: none">
+      <div class="pay-login-container">
+        <p>회원인증</p>
+        <div class="id-input-div">
+          <label for="id-input">아이디</label>
+          <input type="text" id="id-input" />
+        </div>
+        <div class="pwd-input-div">
+          <label for="pwd-input">비밀번호</label>
+          <input type="password" id="pwd-input" />
+        </div>
+        <div class="login-btn" id="login-btn">
+          <p>로그인</p>
+        </div>
+        <div class="user-info-find">
+          <p>비밀번호를 잊으셨나요?</p>
+          <p>회원가입</p>
+        </div>
+      </div>
+    </div>
+    <div class="pay-step-modal" id="pay-regist-modal" style="display: none">
+      <div class="pay-regist-container">
+        <div class="tos-check-box">
+          <div class="check-btn">
+            <span>V</span>
+          </div>
+          <p>본인확인 서비스 이용약관 전체 동의</p>
+        </div>
+        <div class="id-input-div">
+          <label for="id-input">아이디</label>
+          <input type="text" id="id-input" />
+        </div>
+        <div class="pwd-input-div">
+          <label for="pwd-input">비밀번호</label>
+          <input type="password" id="pwd-input" />
+        </div>
+        <p>휴대폰 정보</p>
+        <div class="phone-input-div">
+          <select class="news-agency-select">
+            <option>SKT</option>
+            <option>KT</option>
+            <option>LG U+</option>
+            <option>알뜰폰</option>
+          </select>
+          <input type="tel" id="tel-input" />
+        </div>
+        <div class="send-cert-phone">
+          <span>인증번호발송</span>
+        </div>
+        <div class="do-regist-btn">
+          <span>인증완료</span>
+        </div>
       </div>
     </div>
     <div class="background" id="background" style="display: none"></div>

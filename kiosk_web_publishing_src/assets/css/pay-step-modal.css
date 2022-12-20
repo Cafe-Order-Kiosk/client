@@ -338,5 +338,84 @@
 }
 
 /* 전화번호 모달 */
+#pay-dial-modal {
+  height: 720px;
+}
+
+#pay-dial-modal > .dial-container {
+  /* border: 1px solid black; /*temp*/
+  width: 95%;
+  height: 95%;
+  margin: 2.5% auto;
+}
+#pay-dial-modal > .dial-container > p {
+  width: 100%;
+  height: max-content;
+  font-size: 32px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+#pay-dial-modal > .dial-container > .dial-window {
+  width: 95%;
+  height: 60px;
+  border: 2px solid darkgray;
+  border-radius: 10px;
+  background-color: rgb(243, 243, 243);
+  margin: 0 auto;
+}
+
+.dial-grid-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  /* border: 1px solid black; /* temp */
+  width: 100%;
+  height: 80%;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: repeat(4, 1fr);
+  place-items: center; /* 가운데 정렬 */
+}
+
+.dial-grid-container > .grid-item {
+  width: 120px;
+  height: 120px;
+  background-color: lightgray;
+  border-radius: 15px;
+  border: 2px solid darkgray;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.dial-grid-container > .grid-item:hover {
+  background-color: darkgray;
+  border-color: rgb(87, 87, 87);
+}
+
+.dial-grid-container > .edit-number-btn {
+  background-color: var(--root);
+}
+.dial-grid-container > .edit-number-btn:hover {
+  background-color: var(--dark-root);
+}
+
+.dial-grid-container > .confirm-number-btn {
+  background-color: tan;
+}
+.dial-grid-container > .confirm-number-btn:hover {
+  background-color: rgb(166, 142, 111);
+}
+
+.dial-grid-container > .grid-item > span {
+  display: block;
+  line-height: 120px;
+  font-size: 70px;
+  text-align: center;
+  color: rgb(48, 48, 48);
+}
+.dial-grid-container > .grid-item:last-child > span {
+  font-size: 42px;
+}
 
 /* 바코드 모달 */
