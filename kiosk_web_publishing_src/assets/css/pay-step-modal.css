@@ -339,7 +339,9 @@
 
 /* 전화번호 모달 */
 #pay-dial-modal {
-  height: 720px;
+  width: 450px;
+  height: 620px;
+  margin-left: 1.5vw;
 }
 
 #pay-dial-modal > .dial-container {
@@ -351,18 +353,37 @@
 #pay-dial-modal > .dial-container > p {
   width: 100%;
   height: max-content;
-  font-size: 32px;
-  padding-left: 15px;
+  font-size: 28px;
+  margin-top: 30px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 #pay-dial-modal > .dial-container > .dial-window {
-  width: 95%;
+  width: 75%;
   height: 60px;
   border: 2px solid darkgray;
   border-radius: 10px;
   background-color: rgb(243, 243, 243);
   margin: 0 auto;
+  font-size: 28px;
+  padding-left: 10px;
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+#pay-dial-modal > .dial-container > .dial-window > div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 15px;
+  line-height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
 }
 
 .dial-grid-container {
@@ -370,8 +391,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr; */
   /* border: 1px solid black; /* temp */
-  width: 100%;
-  height: 80%;
+  width: 80%;
+  height: 75%;
+  margin: 0 auto;
   margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -380,16 +402,16 @@
 }
 
 .dial-grid-container > .grid-item {
-  width: 120px;
-  height: 120px;
-  background-color: lightgray;
+  width: 80px;
+  height: 80px;
+  background-color: white;
   border-radius: 15px;
   border: 2px solid darkgray;
   cursor: pointer;
   transition: 0.15s;
 }
 .dial-grid-container > .grid-item:hover {
-  background-color: darkgray;
+  background-color: whitesmoke;
   border-color: rgb(87, 87, 87);
 }
 
@@ -401,21 +423,17 @@
 }
 
 .dial-grid-container > .confirm-number-btn {
-  background-color: tan;
+  background-color: darkgray;
 }
 .dial-grid-container > .confirm-number-btn:hover {
-  background-color: rgb(166, 142, 111);
+  background-color: lightgray;
 }
 
 .dial-grid-container > .grid-item > span {
   display: block;
-  line-height: 120px;
-  font-size: 70px;
+  line-height: 80px;
+  font-size: 30px;
   text-align: center;
-  color: rgb(48, 48, 48);
-}
-.dial-grid-container > .grid-item:last-child > span {
-  font-size: 42px;
 }
 
 /* 바코드 모달 */

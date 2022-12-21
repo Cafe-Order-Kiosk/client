@@ -37,34 +37,37 @@ for (let i = 0; i < 20; i++) {
 }
 
 /* product 랜덤 생성 */
+
 const flexContainer = document.querySelector(".product-flex-container");
-for (let i = 0; i < 20; i++) {
-  let price = Math.floor(Math.random() * 20) * 100;
-  price += 3000;
+if (flexContainer != null) {
+  for (let i = 0; i < 20; i++) {
+    let price = Math.floor(Math.random() * 20) * 100;
+    price += 3000;
 
-  let idx = Math.floor(Math.random() * imgs.length);
+    let idx = Math.floor(Math.random() * imgs.length);
 
-  let idx2 = Math.floor(Math.random() * menus.length);
+    let idx2 = Math.floor(Math.random() * menus.length);
 
-  let item = document.createElement("div");
-  item.setAttribute("class", "product");
-  let img = document.createElement("img");
-  img.src = imgs[idx];
-  item.appendChild(img);
-  let hr = document.createElement("hr");
-  item.appendChild(hr);
-  let p1 = document.createElement("p");
-  p1.setAttribute("class", "product-name");
-  let text1 = document.createTextNode(menus[idx2]);
-  p1.appendChild(text1);
+    let item = document.createElement("div");
+    item.setAttribute("class", "product");
+    let img = document.createElement("img");
+    img.src = imgs[idx];
+    item.appendChild(img);
+    let hr = document.createElement("hr");
+    item.appendChild(hr);
+    let p1 = document.createElement("p");
+    p1.setAttribute("class", "product-name");
+    let text1 = document.createTextNode(menus[idx2]);
+    p1.appendChild(text1);
 
-  let p2 = document.createElement("p");
-  p2.setAttribute("class", "product-price");
-  let text2 = document.createTextNode("₩ " + price + " 원");
-  p2.appendChild(text2);
+    let p2 = document.createElement("p");
+    p2.setAttribute("class", "product-price");
+    let text2 = document.createTextNode("₩ " + price + " 원");
+    p2.appendChild(text2);
 
-  item.appendChild(p1);
-  item.appendChild(p2);
+    item.appendChild(p1);
+    item.appendChild(p2);
 
-  flexContainer.appendChild(item);
+    flexContainer.appendChild(item);
+  }
 }

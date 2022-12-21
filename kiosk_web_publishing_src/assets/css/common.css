@@ -46,3 +46,12 @@ body {
   height: 100%;
   cursor: pointer;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+/* isVisible */
+.hide {
+  display: none;
+}

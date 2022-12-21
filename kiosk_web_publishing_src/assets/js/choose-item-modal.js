@@ -1,22 +1,29 @@
 // step1. 모달
-const chooseItemModal = document.querySelector(".choose-item-modal");
-const background = document.querySelector(".background");
-document.querySelectorAll(".product").forEach((el) => {
-  el.addEventListener("click", function () {
-    chooseItemModal.setAttribute("style", "display: ;");
-    background.setAttribute("style", "display: ;");
-  });
-});
-background.addEventListener("click", () => {
-  closeModal();
-});
+// const chooseItemModal = document.querySelector(".choose-item-modal");
+// // const background = document.querySelector(".background");
+// document.querySelectorAll(".product").forEach((el) => {
+//   el.addEventListener("click", function () {
+//     removeHide(chooseItemModal);
+//     // chooseItemModal.setAttribute("style", "display: ;");
+//     // background.setAttribute("style", "display: ;");
+//     removeHide(background);
+//   });
+// });
+
+// background.addEventListener("click", () => {
+//   closeModal();
+// });
 
 // 모달창과 백그라운드를 닫는 함수
 function closeModal() {
-  chooseItemModal.setAttribute("style", "display: none");
-  background.setAttribute("style", "display: none");
-  chooseItemStep1.setAttribute("style", "display: ;");
-  chooseItemStep2.setAttribute("style", "display: none");
+  addHide(chooseItemModal);
+  // chooseItemModal.setAttribute("style", "display: none");
+  // background.setAttribute("style", "display: none");
+  removeHide(chooseItemStep1);
+  addHide(chooseItemStep2);
+  addHide(background);
+  // chooseItemStep1.setAttribute("style", "display: ;");
+  // chooseItemStep2.setAttribute("style", "display: none");
 }
 
 // step2. 모달
@@ -37,8 +44,10 @@ chooseCustomBtn.addEventListener("click", () => {
 
 // 아이탬 프래그먼트 체인지
 function changeItemBody() {
-  chooseItemStep1.setAttribute("style", "display: none;");
-  chooseItemStep2.setAttribute("style", "display: ;");
+  addHide(chooseItemStep1);
+  // chooseItemStep1.setAttribute("style", "display: none;");
+  // chooseItemStep2.setAttribute("style", "display: ;");
+  removeHide(chooseItemStep2);
 }
 
 // step2 모달의 취소나, 골라 담기 버튼 누르면 모달 닫히는 액션

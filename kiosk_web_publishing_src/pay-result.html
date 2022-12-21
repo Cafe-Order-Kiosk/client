@@ -9,16 +9,26 @@
     <link rel="stylesheet" href="/assets/css/toolbar.css" />
     <link rel="stylesheet" href="/assets/css/pay-result.css" />
     <link rel="stylesheet" href="/assets/css/pay-step-modal.css" />
+    <link rel="stylesheet" href="/assets/css//admin-menu-editor.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="menu-tool-bar">
       <div class="left-menu-container">
-        <img src="/assets/img/home-white.png" class="tool-bar-img def-div home-btn" />
-        <img src="/assets/img/category.png" class="tool-bar-img def-div cat-btn" />
+        <img src="/assets/img/home-white.png" class="tool-bar-img def-div home-btn tool-bar-btn" />
+        <img src="/assets/img/category.png" class="tool-bar-img def-div cat-btn tool-bar-btn" />
       </div>
-      <img src="/assets/img/tool_bar_seperator.png" class="tool-bar-img def-div tool-bar-seperator" />
-      <div class="brand-name">SAMPLE CAFE</div>
+      <div class="seperator-container">
+        <img src="/assets/img/tool_bar_seperator.png" class="tool-bar-img def-div tool-bar-seperator" />
+      </div>
+      <div class="brand-name"><span>SAMPLE CAFE</span></div>
+      <div class="admin-menu-container">
+        <div class="edit-menu-btn hidden">
+          <img />
+        </div>
+      </div>
     </header>
+    <!-- header -->
     <div class="pay-result-container">
       <div class="pay-result-item">
         <div class="item-img">
@@ -140,7 +150,7 @@
 
     <footer class="pay-footer">
       <div class="pay-btn-container">
-        <div class="back-menu-btn">
+        <div class="back-menu-btn" id="back-menu-btn">
           <p>이전으로</p>
         </div>
         <div class="pay-cancel-btn">
@@ -151,7 +161,8 @@
         </div>
       </div>
     </footer>
-    <div class="pay-step-modal" id="pay-step1-modal" style="display: none">
+    <!-- 포인트 적립 여부 모달 -->
+    <div class="pay-step-modal hide" id="pay-step1-modal">
       <div class="pay-select-info-div">
         <p class="pay-step-level">STEP 1.</p>
         <p class="pay-step-text">멤버스 포인트를 사용하시나요?</p>
@@ -168,7 +179,8 @@
         </div>
       </div>
     </div>
-    <div class="pay-step-modal" id="pay-step2-modal" style="display: none">
+    <!-- 결제방식 모달 -->
+    <div class="pay-step-modal hide" id="pay-step2-modal">
       <div class="pay-select-info-div">
         <p class="pay-step-level">STEP 2.</p>
         <p class="pay-step-text">결제 방식을 선택해주세요.</p>
@@ -185,7 +197,8 @@
         </div>
       </div>
     </div>
-    <div class="pay-step-modal" id="pay-progress-modal" style="display: none">
+    <!-- 신용카드 결제 모습 보여주는 모달 -->
+    <div class="pay-step-modal hide" id="pay-progress-modal">
       <div class="pay-select-info-div">
         <div class="pay-method-icons">
           <img src="/assets/img/credit-card.png" />
@@ -193,7 +206,8 @@
         <p class="pay-guide-text">결제중입니다</p>
       </div>
     </div>
-    <div class="pay-step-modal" id="pay-step3-modal" style="display: none">
+    <!-- 포인트 적립 모달 -->
+    <div class="pay-step-modal hide" id="pay-step3-modal">
       <div class="pay-select-info-div">
         <p class="pay-step-level">STEP 3.</p>
         <p class="pay-step-text">포인트를 적립하시겠어요?</p>
@@ -211,10 +225,16 @@
         </p>
       </div>
     </div>
-    <div class="pay-step-modal" id="pay-dial-modal" style="display: none">
+    <!-- 휴대전화 모달 -->
+    <div class="pay-step-modal hide" id="pay-dial-modal">
       <div class="dial-container">
         <p>휴대폰 번호를 입력해주세요</p>
-        <div class="dial-window"></div>
+        <div class="dial-window">
+          <span></span>
+          <div class="clear-phone-number hide">
+            <span>x</span>
+          </div>
+        </div>
         <div class="dial-grid-container">
           <div class="grid-item">
             <span>1</span>
@@ -255,7 +275,8 @@
         </div>
       </div>
     </div>
-    <div class="pay-step-modal" id="pay-login-modal" style="display: none">
+    <!-- 로그인 모달 -->
+    <div class="pay-step-modal hide" id="pay-login-modal">
       <div class="pay-login-container">
         <p>회원인증</p>
         <div class="id-input-div">
@@ -275,7 +296,8 @@
         </div>
       </div>
     </div>
-    <div class="pay-step-modal" id="pay-regist-modal" style="display: none">
+    <!-- 회원가입 모달 -->
+    <div class="pay-step-modal hide" id="pay-regist-modal">
       <div class="pay-regist-container">
         <div class="tos-check-box">
           <div class="check-btn">
@@ -309,8 +331,144 @@
         </div>
       </div>
     </div>
-    <div class="background" id="background" style="display: none"></div>
+    <!-- 메뉴 편집 창 -->
+    <div class="admin-editor-modal hide" id="admin-editor-modal">
+      <p>상품 등록</p>
+      <div class="editor-ui-container">
+        <div class="editor-option-container">
+          <label class="editor-label" for="product-name-input">상품명</label>
+          <input class="editor-input" id="product-name-input" />
+        </div>
+        <div class="editor-option-container">
+          <label class="editor-label" for="product-list-select">종류</label>
+          <div class="select-div">
+            <select id="product-list-select">
+              <option selected>선택해주세요</option>
+              <option>커피메뉴</option>
+              <option>NON커피메뉴</option>
+              <option>TEA</option>
+              <option>디저트/간식류</option>
+            </select>
+          </div>
+        </div>
+        <div class="editor-option-container">
+          <label class="editor-label" for="product-price-input">가격</label>
+          <input class="editor-input" type="number" id="product-price-input" />
+        </div>
+        <!-- 아이템 드롭 박스 DOM UNIT-->
+        <div class="option-dropbox-container">
+          <div class="editor-option-dropbox" id="editor-option-dropbox">
+            <p>V</p>
+            <p>커피 옵션</p>
+          </div>
+          <div class="editor-list-item" style="display: none">
+            <ul class="option-list-ul">
+              <li class="option-list-li">
+                <span class="option-name">에스프레소 샷</span>
+                <div class="limit-control">
+                  <span>+</span>
+                  <span>1</span>
+                  <span>-</span>
+                </div>
+                <div class="choose-item">
+                  <span>상세설정</span>
+                  <span>추가</span>
+                  <span>삭제</span>
+                </div>
+              </li>
+              <!-- 지울부분 -->
+              <!-- 지울부분 -->
+            </ul>
+          </div>
+        </div>
+        <!-- 아이템 드롭 박스 DOM UNIT-->
+        <div class="option-dropbox-container">
+          <div class="editor-option-dropbox" id="editor-option-dropbox">
+            <p>V</p>
+            <p>NON 커피 옵션</p>
+          </div>
+          <div class="editor-list-item" style="display: none">
+            <ul class="option-list-ul">
+              <li class="option-list-li">
+                <span class="option-name">코코넛 밀크</span>
+                <div class="limit-control">
+                  <span>+</span>
+                  <span>1</span>
+                  <span>-</span>
+                </div>
+                <div class="choose-item">
+                  <span>상세설정</span>
+                  <span>추가</span>
+                  <span>삭제</span>
+                </div>
+              </li>
+              <!-- 지울부분 -->
+              <!-- 지울부분 -->
+            </ul>
+          </div>
+        </div>
+        <!-- 아이템 드롭 박스 DOM UNIT-->
+        <div class="option-dropbox-container">
+          <div class="editor-option-dropbox" id="editor-option-dropbox">
+            <p>V</p>
+            <p>시럽 추가</p>
+          </div>
+          <div class="editor-list-item" style="display: none">
+            <ul class="option-list-ul">
+              <li class="option-list-li">
+                <span class="option-name">헤이즐넛 시럽</span>
+                <div class="limit-control">
+                  <span>+</span>
+                  <span>1</span>
+                  <span>-</span>
+                </div>
+                <div class="choose-item">
+                  <span>상세설정</span>
+                  <span>추가</span>
+                  <span>삭제</span>
+                </div>
+              </li>
+              <!-- 지울부분 -->
+              <!-- 지울부분 -->
+            </ul>
+          </div>
+        </div>
+        <p class="size-title-text">사이즈</p>
+        <div class="size-btn-container">
+          <div class="size-btn">
+            <div class="check-btn">
+              <img />
+            </div>
+            <p class="size-name-text">small</p>
+          </div>
+          <div class="size-btn">
+            <div class="check-btn">
+              <img />
+            </div>
+            <p class="size-name-text">medium</p>
+          </div>
+          <div class="size-btn">
+            <div class="check-btn">
+              <img />
+            </div>
+            <p class="size-name-text">large</p>
+          </div>
+          <div class="size-btn">
+            <div class="check-btn">
+              <img />
+            </div>
+            <p class="size-name-text">extra</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of UI area-->
+      <div class="item-register-btn">등록하기</div>
+    </div>
+    <!-- 모달창 뒤 백그라운드 -->
+    <div class="background hide" id="background"></div>
+    <script src="/assets/js/admin-menu-editor.js"></script>
     <script src="/assets/js/toolbar.js"></script>
     <script src="/assets/js/pay-result.js"></script>
+    <!-- 어드민 메뉴때문에 추가한 스크립트 -->
   </body>
 </html>

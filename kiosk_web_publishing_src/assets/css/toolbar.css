@@ -7,42 +7,89 @@
   width: 100%;
   height: 100px;
   background-color: var(--root);
+  position: relative;
+  justify-content: space-between;
 }
 
-.menu-tool-bar > * {
-  /* #RESPONES */
-  margin-left: 30px;
-}
 .menu-tool-bar > .left-menu-container {
-  margin-left: 30px;
-  margin-right: 30px;
   display: flex;
+  justify-content: space-evenly;
 }
+
+.menu-tool-bar > .left-menu-container > .tool-bar-btn {
+  display: block;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+/* 툴바 이미지들 사이즈 속성들 */
+.menu-tool-bar > * {
+  /* border: 1px solid black; /*temp*/
+}
+
+.menu-tool-bar > *:nth-child(1) {
+  width: 15%;
+}
+.menu-tool-bar > *:nth-child(2) {
+  width: 10%;
+}
+.menu-tool-bar > *:nth-child(3) {
+  width: 55%;
+}
+.menu-tool-bar > *:nth-child(4) {
+  width: 20%;
+  /* visibility: hidden; */
+}
+
 .menu-tool-bar > .left-menu-container > .tool-bar-img {
   /* 툴바 속 홈 버튼 같은 이미지 들 전역 속성 */
+  object-fit: fill;
+}
+
+/* 세퍼레이터 */
+.menu-tool-bar > .seperator-container > .tool-bar-seperator {
   display: block;
-  margin: 15px;
-  cursor: pointer;
+  width: 93px;
+  height: 93px;
+  object-fit: scale-down;
+  margin: 0 auto;
 }
 
-/* 툴바 이미지 아이템들 개별 속성 */
-.home-btn {
-  /* #RESPONES */
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-/* .tool-bar-seperator {
-} */
-
+/* 브랜드 이름 */
 .brand-name {
   text-align: left;
   font-size: 48px;
   line-height: 100px;
-  cursor: pointer;
   color: white;
+  padding-left: 20px;
+}
+.brand-name > span {
+  cursor: pointer;
+}
+
+/* 어드민 메뉴 */
+.admin-menu-container {
+  /* border: 1px solid black; /* temp */
+  /* border-left: 2px solid white; */
+  display: flex;
+  justify-content: center;
+}
+
+.admin-menu-container > div {
+  width: 70px;
+  height: 70px;
+  /* border: 1px solid black; /*temp */
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.admin-menu-container > .edit-menu-btn > img {
+  width: 100%;
+  height: 100%;
+  content: url(/assets/img/home-white.png);
+  object-fit: fill;
 }
 
 /* footer-tool-bar 옵션 */

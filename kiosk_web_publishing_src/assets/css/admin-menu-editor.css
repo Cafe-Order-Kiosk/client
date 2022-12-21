@@ -1,0 +1,295 @@
+.admin-editor-modal {
+  width: 600px;
+  height: 850px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid black;
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  left: 35%;
+  /*font-weight: 100;*/
+}
+
+/* 상품등록 텍스트 속성 */
+.admin-editor-modal > p {
+  width: 90%;
+  height: 30px;
+  font-size: 28px;
+  /* border: 1px solid black; /* temp */
+  margin: 2% auto;
+}
+
+.admin-editor-modal > .editor-ui-container {
+  width: 90%;
+  height: 84%;
+  margin: 0 auto;
+  margin-bottom: 0;
+  /* border: 1px solid black; /* temp */
+  overflow: scroll;
+}
+.admin-editor-modal > .editor-ui-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 상품 옵션 UI에 대한 설정들 */
+.admin-editor-modal > .editor-ui-container > * {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.admin-editor-modal > .editor-ui-container > div {
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid black; /* temp */
+  display: flex;
+}
+
+.admin-editor-modal > .editor-ui-container > .editor-option-container > * {
+  border: 1px solid darkgray;
+  height: 99%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 60px;
+}
+
+.admin-editor-modal > .editor-ui-container > .editor-option-container > .editor-label {
+  width: 30%;
+  background-color: lightgray;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.admin-editor-modal > .editor-ui-container > .editor-option-container > *:nth-child(2) {
+  width: 70%;
+  text-align: left;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.admin-editor-modal > .editor-ui-container > .editor-option-container > *:nth-child(2) {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.admin-editor-modal > .editor-ui-container > .editor-option-container > .select-div {
+  border: 0.5px solid darkgray;
+  padding-left: 0;
+}
+.admin-editor-modal > .editor-ui-container > .editor-option-container > .select-div > select {
+  padding-left: 10px;
+}
+
+.admin-editor-modal > .editor-ui-container > .editor-option-container > *:nth-child(2) > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid darkgray;
+  font-size: 18px;
+}
+
+/* 드롭박스 아이템 전용 속성 */
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container {
+  min-height: 60px;
+  height: max-content;
+  display: block;
+  /* border: 1px solid red; /*temp*/
+}
+
+/* 드롭박스 아이템 버튼 속성 */
+
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-option-dropbox {
+  background-color: lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 0;
+  display: flex;
+}
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-option-dropbox > * {
+  margin-left: 15px;
+  margin-right: 15px;
+  line-height: 60px;
+}
+
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-option-dropbox > *:first-child {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 40px;
+  margin-top: 10px;
+  line-height: 45px;
+  background-color: white;
+}
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-option-dropbox > *:last-child {
+  font-size: 24px;
+}
+
+/* 드롭박스 리스트 속성 */
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-list-item {
+  height: max-content;
+  min-height: 100px;
+  max-height: 200px;
+  overflow: scroll;
+  transition: 0.5s;
+}
+
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-list-item::-webkit-scrollbar {
+  display: none;
+}
+
+.admin-editor-modal > .editor-ui-container > .option-dropbox-container > .editor-list-item > .option-list-ul {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.admin-editor-modal
+  > .editor-ui-container
+  > .option-dropbox-container
+  > .editor-list-item
+  > .option-list-ul
+  > .option-list-li {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-editor-modal
+  > .editor-ui-container
+  > .option-dropbox-container
+  > .editor-list-item
+  > .option-list-ul
+  > .option-list-li
+  > * {
+  /* border: 1px solid black; /* temp */
+  width: 100px;
+  text-align: center;
+}
+.admin-editor-modal
+  > .editor-ui-container
+  > .option-dropbox-container
+  > .editor-list-item
+  > .option-list-ul
+  > .option-list-li
+  > *:last-child {
+  width: 150px;
+}
+
+.admin-editor-modal
+  > .editor-ui-container
+  > .option-dropbox-container
+  > .editor-list-item
+  > .option-list-ul
+  > .option-list-li
+  > * {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.fade {
+  animation: fadeInDown 1s;
+}
+
+/* listItem 용 애니메이션 css */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(0, -5px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* size 옵션용 컨테이너 속성 */
+.admin-editor-modal > .editor-ui-container > .size-title-text {
+  font-size: 24px;
+}
+
+.admin-editor-modal > .editor-ui-container > .size-btn-container {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-editor-modal > .editor-ui-container > .size-btn-container > .size-btn {
+  border: 2px solid darkgray;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: 0.15s;
+  display: flex;
+  justify-content: center;
+}
+.admin-editor-modal > .editor-ui-container > .size-btn-container > .size-btn:hover {
+  background-color: darkgray;
+  border-color: rgb(49, 49, 49);
+}
+
+.admin-editor-modal > .editor-ui-container > .size-btn-container > .size-btn > * {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* size btn의 체크박스 속성 */
+.admin-editor-modal > .editor-ui-container > .size-btn-container > .size-btn > .check-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 1px solid black;
+  border: 1px solid darkgray;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 30px;
+}
+
+/* size btn의 폰트 속성 */
+.admin-editor-modal > .editor-ui-container > .size-btn-container > .size-btn > p {
+  font-size: 13px;
+  text-align: left;
+  line-height: 50px;
+  padding-right: 5px;
+}
+
+.is-checked {
+  display: block;
+  width: 50%;
+  height: 50%;
+  object-fit: scale-down;
+  margin: 25% auto;
+  border: none;
+  content: url(/assets/img/size-checked-circle.png);
+}
+
+/* 상품등록 버튼 속성 */
+.item-register-btn {
+  width: 50%;
+  height: 55px;
+  /* border: 1px solid darkgray; /* temp */
+  background-color: lightgray;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+  margin-top: 5px;
+  line-height: 55px;
+  cursor: pointer;
+}
+
+.item-register-btn:hover {
+  border-color: rgb(70, 70, 70);
+  background-color: darkgray;
+}
