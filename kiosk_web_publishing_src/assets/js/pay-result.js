@@ -28,6 +28,7 @@ function closePayModal() {
   addHide(payDialModal);
   addHide(payLoginModal);
   addHide(payRegistModal);
+  clearInterval(timer);
 
   // payStep1Modal.setAttribute("style", "display:none;");
   // payStep2Modal.setAttribute("style", "display : none;");
@@ -43,12 +44,12 @@ function closePayModal() {
 let nextStep = null;
 // 지금 누른게 어떤 버튼인지 판단하는 함수
 function continueNextStep(el) {
-  switch (el.id) {
-    case "pay-step1-modal":
-      moveStep2();
-      break;
-    case "pay-step3-modal":
-      break;
+  if (el == payStep1Modal) {
+    moveStep2();
+  } else if (el == payStep2Modal) {
+    moveStep3Modal();
+  } else {
+    console.log("잘못된 엘리먼트 입력....");
   }
 }
 
@@ -107,7 +108,7 @@ dialButtons.forEach((el) => {
     });
   } else {
     el.addEventListener("click", () => {
-      if (dialWindow.innerText.length >= 11) {
+      if (dialWindow.innerText.length == 13) {
         dialWindow.innerText = "";
         closeBtnListener();
         alert("포인트가 적립되었습니다. :)");
@@ -137,10 +138,31 @@ phoneNumberClearBtn.addEventListener("click", () => {
 
 // 바코드
 // p-m-barcode
+let barcodeModal = document.getElementById("pay-barcode-modal");
 let PMBarcode = document.getElementById("p-m-barcode");
 PMBarcode.addEventListener("click", () => {
-  alert("준비중!");
+  // alert("준비중!");
+  // nextStep = payStep1Modal;
+  // addHide(payStep1Modal);
+  // removeHide(barcodeModal);
+
+  // setTimeout(() => {
+  //   continueNextStep(nextStep);
+  // }, 3000);
+  showBarcodeModal(payStep1Modal);
 });
+
+// 바코드 보여주는 함수
+function showBarcodeModal(el) {
+  nextStep = el;
+  addHide(el);
+  removeHide(barcodeModal);
+
+  setTimeout(() => {
+    continueNextStep(el);
+    addHide(barcodeModal);
+  }, 3000);
+}
 
 // 사용안함
 let PMNot = document.getElementById("p-m-not");
@@ -155,6 +177,7 @@ PMNot.addEventListener("click", () => {
 function moveStep2() {
   addHide(payStep1Modal);
   addHide(payDialModal);
+  addHide(barcodeModal);
   removeHide(payStep2Modal);
 }
 
@@ -165,6 +188,7 @@ let payStep2Modal = document.getElementById("pay-step2-modal");
 let creditCardBtn = document.querySelector("#step2-btn-container>.p-p-credit");
 creditCardBtn.addEventListener("click", () => {
   addHide(payStep2Modal);
+  // console.log(payStep2Modal.id);
   // payStep2Modal.setAttribute("style", "display:none;");
   // payProgressModal.setAttribute("style", "display : ;");
   removeHide(payProgressModal);
@@ -174,13 +198,15 @@ creditCardBtn.addEventListener("click", () => {
 // 포인트카드
 let pointCardBtn = document.querySelector("#step2-btn-container>.p-p-point");
 pointCardBtn.addEventListener("click", () => {
-  alert("준비중!");
+  // alert("준비중!");
+  showBarcodeModal(payStep2Modal);
 });
 
 // 기프티콘
 let gifticonBtn = document.querySelector("#step2-btn-container>.p-p-gifticon");
 gifticonBtn.addEventListener("click", () => {
-  alert("준비중!");
+  // alert("준비중!");
+  showBarcodeModal(payStep2Modal);
 });
 
 // buttonsStep2.forEach((el) => {
