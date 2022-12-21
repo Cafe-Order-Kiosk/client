@@ -1,10 +1,10 @@
 // 이전으로 버튼
-// let backMenuBtn = document.querySelector(".back-menu-btn");
-// if (backMenuBtn != null) {
-//   backMenuBtn.addEventListener("click", () => {
-//     location.href = "/menu-view.html";
-//   });
-// }
+let backMenuBtn = document.querySelector(".back-menu-btn");
+if (backMenuBtn != null) {
+  backMenuBtn.addEventListener("click", () => {
+    location.href = "/menu-view.html";
+  });
+}
 
 // 결제취소 버튼
 let payCancelBtn = document.querySelector(".pay-cancel-btn");
