@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/common.css" />
-    <link rel="stylesheet" href="/assets/css/toolbar.css" />
-    <link rel="stylesheet" href="/assets/css/category.css" />
-    <style>
-      .home-text {
-        width: 100%;
-        height: max-content;
-        text-align: center;
-        margin: auto auto;
-        text-align: center;
-        margin-top: 25vh;
-        font-size: 120px;
-        display: block;
-        position: absolute;
-        z-index: 2;
-        color: white;
-        cursor: default;
-      }
-    </style>
-  </head>
-  <body>
-    <p class="home-text">화면을 터치해주세요</p>
-    <div class="background2"></div>
-    <video autoplay controls loop muted poster="/assets/img/thumb-nail.JPG" preload="auto">
-      <source src="/assets/videos/title-videov2.mp4" type="video/mp4" />
-    </video>
-    <script>
-      let background2 = document.querySelector(".background2");
-      background2.addEventListener("click", () => {
-        location.href = "/category.html";
-      });
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <link rel="stylesheet" href="/assets/css/toolbar.css" />
+  <link rel="stylesheet" href="/assets/css/category.css" />
+  <link rel="stylesheet" href="/assets//css/home.css">
+</head>
+
+<body>
+  <p class="home-text">화면을 터치해주세요</p>
+  <div class="background2"></div>
+  <video autoplay controls loop muted poster="/assets/img/thumb-nail.JPG" preload="auto">
+    <source src="/assets/videos/title-videov2.mp4" type="video/mp4" />
+  </video>
+  <script src="/assets/js/home.js"></script>
+</body>
+
 </html>
