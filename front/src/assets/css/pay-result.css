@@ -37,7 +37,7 @@
   margin: 0 auto;
   width: 90%;
   height: 90%;
-  content: url("/assets/img/coffee.png");
+  /* content: url("/assets/img/coffee.png"); */
   object-fit: contain;
 }
 /* 결제 아이템 컴포넌트의 주문 옵션 정보 속성 */
