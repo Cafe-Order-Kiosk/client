@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:400");
+
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+* {
+  font-family: "Black Han Sans", "sans-serif";
+  margin: 0;
+  padding: 0;
+}
+
+.def-div {
+  padding: 5px;
+}
+
+:root {
+  --root: rgb(251, 158, 82);
+  --dark-root: rgb(225, 142, 74);
+  --light-gray: rgb(250, 250, 250);
+  --light-gray2: rgb(232, 232, 232);
+  --dark-gray: rgb(181, 181, 181);
+  --cat-line: rgb(208, 208, 208);
+}
+
+/* 모달 시 뒤에 백그라운드 div 속성 */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.652);
+  width: 100%;
+  height: 100%;
+}
+
+.background2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.413);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* isVisible */
+.hide {
+  display: none;
+}
